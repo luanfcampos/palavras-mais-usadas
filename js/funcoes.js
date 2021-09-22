@@ -60,6 +60,17 @@ function removerElementoSeApenasNumero(array) {
     })
 }
 
+//remove simbolos, caracteres especiais e tags das linhas
+function removerSimbolos(simbolos) {
+    return function (array) {
+        return array.map(el => {
+            return simbolos.reduce((acc, simbolo) => {
+                return acc.split(simbolo).join('')
+            }, el)
+        })
+    }
+}
+
 module.exports = {
     lerDiretorio,
     lerArquivo,
@@ -68,4 +79,5 @@ module.exports = {
     removerElementoSeVazio,
     removerElementoSeIncluir,
     removerElementoSeApenasNumero,
+    removerSimbolos,
 }
