@@ -83,6 +83,18 @@ function removerSimbolos(simbolos) {
     }
 }
 
+//agrupa e conta as palavras
+function agruparElementos(palavras) {
+    return Object.values(palavras.reduce((acc, palavra)=> {
+        const el = palavra.toLowerCase()
+        const qtde = acc[el] ? acc[el].qtde + 1 : 1
+        acc[el] = { elemento: el, qtde }
+        return acc
+    }, {}))
+}
+
+//
+
 module.exports = {
     lerDiretorio,
     lerArquivo,
@@ -94,4 +106,5 @@ module.exports = {
     removerElementoSeIncluir,
     removerElementoSeApenasNumero,
     removerSimbolos,
+    agruparElementos,
 }
