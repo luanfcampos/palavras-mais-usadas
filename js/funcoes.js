@@ -34,8 +34,10 @@ function lerArquivos(caminhos) {
 }
 
 //filtra os arquivos com a extenção de interesse
-function elementosTerminadosCom(array, padrao) {
-    return array.filter(el => el.endsWith(padrao))
+function elementosTerminadosCom(padrao) {
+    return function(array) {
+        return array.filter(el => el.endsWith(padrao))
+    }
 }
 
 //remove linhas vazias
