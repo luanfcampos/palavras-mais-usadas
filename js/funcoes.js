@@ -33,6 +33,18 @@ function lerArquivos(caminhos) {
     return Promise.all(caminhos.map(caminho => lerArquivo(caminho)))
 }
 
+//une os conteudos do array em uma unica string
+function mesclarConteudos (array) {
+    return array.join(' ')
+}
+
+//separa os conteudos
+function separarPor(simbolo) {
+    return function(texto) {
+        return texto.split(simbolo)
+    }
+}
+ 
 //filtra os arquivos com a extenção de interesse
 function elementosTerminadosCom(padrao) {
     return function(array) {
@@ -75,6 +87,8 @@ module.exports = {
     lerDiretorio,
     lerArquivo,
     lerArquivos,
+    mesclarConteudos,
+    separarPor,
     elementosTerminadosCom,
     removerElementoSeVazio,
     removerElementoSeIncluir,
