@@ -1,7 +1,7 @@
 <h1>Palavras Mais Usadas</h1>
 
 <h2>Projeto</h2>
-<p>O objetivo desse projeto foi criar um script que fizesse a leitura de arquivos de legendas (formato .srt) e que retornasse quais são as palavras que fram mais utilizadas.<p>
+<p>O objetivo desse projeto foi criar um script que fizesse a leitura de arquivos de legendas (formato .srt) e que retornasse quais são as palavras que foram mais utilizadas.<p>
 
 <h2>Skills</h2>
 <div>
